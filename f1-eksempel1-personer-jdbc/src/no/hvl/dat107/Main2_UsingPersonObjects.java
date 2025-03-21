@@ -12,9 +12,9 @@ public class Main2_UsingPersonObjects {
 
 	static final String JDBC_DRIVER = "org.postgresql.Driver";
 	
-	static final String DATABASE = "";   // Endre til din databae = ditt brukernavn
-	static final String BRUKERNAVN = ""; // Endre til ditt brukernavn
-	static final String PASSORD = "";    // Endre til ditt passord
+	static final String DATABASE = "h186469";   // Endre til din databae = ditt brukernavn
+	static final String BRUKERNAVN = "h186469"; // Endre til ditt brukernavn
+	static final String PASSORD = "LFCliverpool2302";    // Endre til ditt passord
 	
 	static final String TJENER_OG_PORT = "ider-database.westeurope.cloudapp.azure.com:5433";
 	static final String DB_URL = "jdbc:postgresql://" + TJENER_OG_PORT + "/" + DATABASE;
