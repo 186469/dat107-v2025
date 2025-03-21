@@ -14,18 +14,17 @@ public class VitnemalDAO {
     private EntityManagerFactory emf;
 
     public VitnemalDAO() {
-        emf = Persistence.createEntityManagerFactory("vitnemalPU",
-		Map.of("jakarta.persistence.jdbc.password", Passwords.AZURE_PASSWORD));
+        emf = Persistence.createEntityManagerFactory("vitnemalPU");
     }
     
     /* --------------------------------------------------------------------- */
 
-    public /*TODO*/void hentVitnemalForStudent(/*TODO*/) {
+    public Vitnemal hentVitnemalForStudent(int studnr) {
         
         EntityManager em = emf.createEntityManager();
         try {
         	
-        	/*TODO*/
+        	return em.find(Vitnemal.class, studnr);
         	
         } finally {
             em.close();
@@ -34,13 +33,15 @@ public class VitnemalDAO {
 
     /* --------------------------------------------------------------------- */
 
-    public /*TODO*/void hentKarakterForStudentIEmne(/*TODO*/) {
+    public /*TODO*/void hentKarakterForStudentIEmne(int studnr, String emnekode) {
         
         EntityManager em = emf.createEntityManager();
         
         try {
         	
-        	/*TODO*/
+        	String q = "select k from Karakter as k" 
+        			+ " where k.vitnemal.studnr = :studnr"
+        			+ "and k.emnekode = : emnekode";
         	
         } finally {
             em.close();

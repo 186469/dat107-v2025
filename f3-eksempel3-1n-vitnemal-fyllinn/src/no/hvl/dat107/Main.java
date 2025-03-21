@@ -8,9 +8,12 @@ public class Main {
 		
 		//a) Søke opp vitnemålet til en gitt student.
 
+		Vitnemal vm = vitnemalDAO.hentVitnemalForStudent(123456);
+		System.out.println(vm);
 		
 		//b) Søke opp karakteren til en gitt student i et gitt kurs.
-
+		
+		
 		
 		//c) Registrere en ny karakter for en gitt student 
 		//		når karakter ikke finnes fra før.
