@@ -11,7 +11,7 @@ SET search_path TO forelesning3_serial;
     
 -- Ikke nødvendig å slette tabellen(e) siden vi har tomt skjema, men ...
 -- DROP TABLE person;
-CREATE TABLE person
+CREATE TABLE person	
 (
     id SERIAL,
     navn VARCHAR(30) NOT NULL,

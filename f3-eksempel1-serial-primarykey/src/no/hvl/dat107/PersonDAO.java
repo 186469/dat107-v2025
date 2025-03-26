@@ -17,8 +17,7 @@ public class PersonDAO {
     private EntityManagerFactory emf;
     
     public PersonDAO() {
-    	emf	= Persistence.createEntityManagerFactory("personPersistenceUnit", 
-		Map.of("jakarta.persistence.jdbc.password", Passwords.AZURE_PASSWORD));
+    	emf	= Persistence.createEntityManagerFactory("personPersistenceUnit");
     }
     
     public int savePerson(Person p) {
